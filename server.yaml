@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: world-bastion
   vars_files:
     - "./vars/main.yaml"
   tasks:
