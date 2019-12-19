@@ -17,3 +17,6 @@ peers:
   hoth:
     address: 10.0.0.3/32
     allowedIPs: 10.0.0.3/32
+  kevinsiphone:
+    address: 10.0.0.4/32
+    allowedIPs: 10.0.0.4/32
