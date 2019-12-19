@@ -1,6 +1,10 @@
 ---
-- hosts: all
-  remote_user: kevindurb
+- hosts: localhost
+  vars_files:
+    - "./vars/main.yaml"
+  vars_prompt:
+    - name: hostname
+      prompt: "what is your hostname?"
   tasks:
     - name: add wireguard ppa
       become: yes
@@ -21,23 +25,8 @@
       fetch:
         src: ~/publickey
         flat: yes
-        dest: ./files/publickeys/{{inventory_hostname}}
+        dest: ./files/publickeys/{{hostname}}
 
-- hosts: worldbastion
-  remote_user: kevindurb
-  tasks:
-    - sysctl:
-        name: net.ipv4.ip_forward
-        value: '1'
-        sysctl_set: yes
-        state: present
-        reload: yes
-
-- hosts: all
-  remote_user: kevindurb
-  vars_files:
-    - "./vars/main.yaml"
-  tasks:
     - name: read private key
       slurp:
         src: ~/privatekey
@@ -46,7 +35,7 @@
     - name: generate wireguard config
       become: yes
       template:
-        src: ./files/subspace.conf
+        src: ./files/client.conf
         dest: /etc/wireguard/subspace.conf
 
     - name: start wireguard interface
