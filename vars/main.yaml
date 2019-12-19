@@ -11,3 +11,6 @@ peers:
   subspacetest02:
     address: 10.0.0.12/32
     allowedIPs: 10.0.0.12/32
+  bespin:
+    address: 10.0.0.2/32
+    allowedIPs: 10.0.0.2/32
