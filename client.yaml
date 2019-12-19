@@ -23,7 +23,7 @@
       args:
         creates: ~/publickey
 
-    - name: pull ssh key back to controller
+    - name: store public key in repo
       fetch:
         src: ~/publickey
         flat: yes

@@ -7,16 +7,11 @@ peers:
     listenPort: 51820
   subspacetest01:
     address: 10.0.0.11/32
-    allowedIPs: 10.0.0.11/32
   subspacetest02:
     address: 10.0.0.12/32
-    allowedIPs: 10.0.0.12/32
   bespin:
     address: 10.0.0.2/32
-    allowedIPs: 10.0.0.2/32
   hoth:
     address: 10.0.0.3/32
-    allowedIPs: 10.0.0.3/32
   kevinsiphone:
     address: 10.0.0.4/32
-    allowedIPs: 10.0.0.4/32
