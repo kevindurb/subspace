@@ -1,4 +1,4 @@
 [all]
-worldbastion ansible_host=167.172.22.98
+world-bastion ansible_host=167.172.22.98
 subspacetest01
 subspacetest02
