@@ -1,17 +1,4 @@
-[coruscant]
-192.168.0.16
-
-[naboo]
-192.168.0.17
-
-[geonosis]
-192.168.0.18
-
-[mustafar]
-192.168.0.19
-
-[bastion]
-192.168.0.7
-
-[worldbastion]
-167.172.22.98
+[all]
+worldbastion ansible_host=167.172.22.98
+subspacetest01
+subspacetest02

@@ -1,16 +1,13 @@
----
-server:
-  address: 10.0.0.1/32
-  endpoint: 167.172.22.98:51820
-  listenPort: 51820
-  allowedIPs: 10.0.0.0/24
-  publicKey: 'ZHOSvF3EjezPuNpP62jg+NabAv1Eh0S+W/t/FusKezc=',
-
-clients:
-  - name: hoth
-    address: 10.0.0.2/32
-    publicKey: ''
-
-  - name: bespin
-    address: 10.0.0.3/32
-    publicKey: ''
+serverName: worldbastion
+peers:
+  worldbastion:
+    address: 10.0.0.1/32
+    allowedIPs: 10.0.0.0/24
+    endpoint: 167.172.22.98:51820
+    listenPort: 51820
+  subspacetest01:
+    address: 10.0.0.11/32
+    allowedIPs: 10.0.0.11/32
+  subspacetest02:
+    address: 10.0.0.12/32
+    allowedIPs: 10.0.0.12/32
