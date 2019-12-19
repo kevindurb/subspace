@@ -8,11 +8,13 @@
   tasks:
     - name: add wireguard ppa
       become: yes
+      when: ansible_os_family == "Debian"
       apt_repository:
         repo: ppa:wireguard/wireguard
 
     - name: install wireguard
       become: yes
+      when: ansible_os_family == "Debian"
       apt:
         name: wireguard
 
